@@ -1,0 +1,45 @@
+{
+  "name": "github",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "ejs": "^2.6.2",
+    "express-parser": "^1.0.0",
+    "express-partials": "^0.3.0",
+    "express-session": "^1.16.2",
+    "github-oauth": "^0.2.2",
+    "method-override": "^3.0.0",
+    "node-github-oauth2": "^0.1.21",
+    "passport": "^0.4.0",
+    "passport-github": "^1.1.0",
+    "passport-github2": "^0.1.11",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-scripts": "3.1.1"
+  },
+  "scripts": {
+    "start": "node ./server/server.js",
+    "startserver": "node ./server/server.js",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
