@@ -109,3 +109,12 @@ a{
   margin: 3px;
   cursor: pointer;
 }
+
+.newTokenBlock{
+  float: left;
+  margin: 5px;
+}
+
+.newTokenBlock span{
+  color: white;
+}

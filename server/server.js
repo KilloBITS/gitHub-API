@@ -26,6 +26,7 @@ passport.use(new GitHubStrategy({
   },
   function(accessToken, refreshToken, profile, done) {
     process.nextTick(function () {
+      profile.accessToken = accessToken;
       return done(null, profile);
     });
   }
@@ -63,8 +64,7 @@ app.get('/account', function(req, res){
 
 app.get('/auth/github',
   passport.authenticate('github', { scope: [ 'user:email' ] }),
-  function(req, res){
-  });
+  function(req, res){});
 
 app.get('/auth/github/callback',
   passport.authenticate('github', { failureRedirect: '/' }),
@@ -77,10 +77,7 @@ app.get('/logout', function(req, res){
   res.redirect('/');
 });
 
-app.listen(80, function(){
-  console.warn('Server started from port 80');
-  console.warn('Local link: http://localhost/');
-});
+app.listen(80);
 
 // function ensureAuthenticated(req, res, next) {
 //   if (req.isAuthenticated()) { return next(); }
